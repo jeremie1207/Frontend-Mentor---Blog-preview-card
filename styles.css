@@ -61,3 +61,26 @@ h1, h2, h3, h4, h5, h6 {
     --font-color-secondary: hsl(0, 0%, 42%);
     --font-family-base : 'Figtree', sans-serif;
 }
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family-base);
+    color: var(--font-color-primary);
+    background-color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    min-block-size: 100vh;
+}
+
+.card {
+    margin-inline: auto;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 1em;
+    inline-size: 90%;
+    max-inline-size: 22.5em;
+    box-shadow: 10px 10px;
+}
