@@ -83,4 +83,33 @@ main {
     inline-size: 90%;
     max-inline-size: 22.5em;
     box-shadow: 10px 10px;
+    display: grid;
+    gap: .5em;
+}
+
+.card__tag {
+  background-color: var(--primary-color);
+  inline-size: 22.5%;
+  padding: .1em;
+  font-weight: 800;
+}
+
+.card__published_date {
+  font-weight: 500;
+}
+
+.card__content {
+  color: var(--font-color-secondary);
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+}
+.card__author_name {
+  font-weight: 800;
+}
+.card__avatar {
+  max-height: 2.5em;
 }
