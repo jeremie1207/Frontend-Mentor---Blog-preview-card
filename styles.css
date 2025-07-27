@@ -1,3 +1,5 @@
+/*reset*/
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -46,12 +48,8 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/*
-  10. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
+
+/*global*/
 
 :root {
     --primary-color : hsl(47, 88%, 63%);
@@ -69,29 +67,53 @@ body {
     background-color: var(--primary-color);
 }
 
+/*composition*/
+
 main {
-    display: flex;
-    align-items: center;
     min-block-size: 100vh;
 }
 
+.grid {
+  display: grid;
+}
+
+/*utilities*/
+
+.flex-center-cross-axis {
+  display: flex;
+  align-items: center;
+}
+
+.m-inline-auto {
+  margin-inline: auto;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+/*blocks*/
+
 .card {
-    margin-inline: auto;
     background-color: var(--secondary-color);
-    border-radius: 15px;
-    padding: 1em;
+    border-radius: 0.9rem;
     inline-size: 90%;
     max-inline-size: 22.5em;
-    box-shadow: 10px 10px;
-    display: grid;
-    gap: 1em;
+    box-shadow: 0.625rem 0.625rem;
 }
 
 .card__tag {
   background-color: var(--primary-color);
   inline-size: 22.5%;
   padding: .1em;
-  font-weight: 800;
 }
 
 .card__published_date {
@@ -102,11 +124,4 @@ main {
   color: var(--font-color-secondary);
 }
 
-.card__author {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-.card__author_name {
-  font-weight: 800;
-}
+/*exception*/
